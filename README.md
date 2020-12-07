@@ -34,7 +34,7 @@ listen          443 ssl;
     add_header      'Access-Control-Allow-Methods' 'GET';
     add_header      'Access-Control-Allow-Headers' 'Content-Type';
     location / {
-        root           /Users/egyedia/development/CEDAR/cedar-cee-demo-api-php;
+        root           /Users/cedar/CEDAR/cedar-cee-demo-api-php;
         try_files      $uri = 404;
         fastcgi_pass   127.0.0.1:9000;
         fastcgi_index  index.php;
@@ -43,7 +43,7 @@ listen          443 ssl;
         fastcgi_param  CEDAR_CEE_PROXY_API_KEY <YOUR_API_KEY>;
     }
     error_log       /Users/cedar/CEDAR/log/cedar-cee-demo-api-php/nginx-error.log warn;
-    access_log      /Users/cedar/CEDAR/log/cedar-cee-demo-api-php/nginx-access.log combined if=$loggable;
+    access_log      /Users/cedar/CEDAR/log/cedar-cee-demo-api-php/nginx-access.log combined;
 }
 ```
 
