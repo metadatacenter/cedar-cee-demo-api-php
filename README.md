@@ -30,8 +30,8 @@ server {
 listen          443 ssl;
     server_name     api-php.cee.metadatacenter.orgx;
     include         cedar/include-ssl.conf;
-    add_header      'Access-Control-Allow-Origin' '*';
-    add_header      'Access-Control-Allow-Methods' 'GET';
+    add_header      'Access-Control-Allow-Origin' 'demo.cee.metadatacenter.orgx';
+    add_header      'Access-Control-Allow-Methods' 'POST';
     add_header      'Access-Control-Allow-Headers' 'Content-Type';
     location / {
         root           /Users/cedar/CEDAR/cedar-cee-demo-api-php;
@@ -50,5 +50,7 @@ listen          443 ssl;
 ### Set up
 
 * Replace the `<YOUR_API_KEY>` with your value from CEDAR (use only the hexadecimal string, leave out the `apiKey` part)
+* Replace the root path  
 * Replace the log paths
 * Replace the server name, if different
+* Replace the 'Access-Control-Allow-Origin' value, if needed
